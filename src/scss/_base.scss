@@ -36,3 +36,7 @@ input[type="submit"] {
 	border: 1px solid $bord-color;
 	background-color: $no-color;
 }
+
+input[type="checkbox"] {
+	display: none;
+}

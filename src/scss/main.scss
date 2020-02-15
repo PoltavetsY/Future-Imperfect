@@ -4,8 +4,11 @@
 @import '_header';
 @import '_menu';
 
-
- // M E N U
+  #head:checked ~ .backdrop {
+    display: block;
+    opacity: 0;
+  }
+ 
 
 
 

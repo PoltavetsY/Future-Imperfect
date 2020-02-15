@@ -30,6 +30,9 @@ input[type="submit"] {
   border: 1px solid #E3E3E3;
   background-color: #ffffff; }
 
+input[type="checkbox"] {
+  display: none; }
+
 header {
   display: flex;
   flex-direction: row;
@@ -82,7 +85,8 @@ header {
   height: 3.5em;
   width: 3.5em;
   overflow: hidden;
-  border: 1px solid #E3E3E3; }
+  border: 1px solid #E3E3E3;
+  z-index: 25; }
   .search:hover .fa-search {
     color: #2EBAAE; }
   .search input {
@@ -180,8 +184,11 @@ input[type="submit"] {
   opacity: .7;
   z-index: 1; }
 
-#bars:checked ~ .backdrop,
-#head:checked ~ .backdrop {
+#bars:checked ~ .backdrop {
   display: block; }
+
+#head:checked ~ .backdrop {
+  display: block;
+  opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

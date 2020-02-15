@@ -59,6 +59,7 @@ header {
 	width: 3.5em;
 	overflow: hidden;
 	border: 1px solid $bord-color;
+	z-index: 25;
 	&:hover .fa-search {
 		color: $head-hover;
 	}
