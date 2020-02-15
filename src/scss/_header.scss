@@ -1,0 +1,95 @@
+header {
+	@include flex(row,space-between,center);
+	height: 3.5em;
+	background-color: $no-color;
+	border: 1px solid $bord-color;
+}
+
+.text-logo {
+	padding: 1.6em;
+	// text-transform: uppercase;
+	// font-size: .8em;
+	border-right: 1px solid $bord-color;
+}
+
+.text-logo a {
+ 	color: $h-color;
+ 	font-weight: bold;
+ 	&:hover {
+		color: $head-hover;
+	}
+}
+
+.links {
+	@include flex(row,flex-start,center);
+	ul{
+		padding-left: 1em;
+	}
+}
+
+.links li{
+	display: inline-block;
+	padding: 0 5px;
+	// font-size: .8em;
+	// text-transform: uppercase;
+	// letter-spacing: .2em;
+	border-right: 1px solid $bord-color;
+	&:last-child {
+		border: none;
+	}
+}
+
+.link-list {
+	color: $link-color;
+	&:hover {
+		color: $head-hover;
+	}
+}
+
+.navigation {
+	@include flex(row, flex-end, center);
+	label {
+		cursor: pointer;
+	}
+}
+
+.search {
+	position: relative;
+	height: 3.5em;
+	width: 3.5em;
+	overflow: hidden;
+	border: 1px solid $bord-color;
+	&:hover .fa-search {
+		color: $head-hover;
+	}
+	input {
+		width: 0;
+		height: 2.5em;
+		margin-right: 1em; 
+		padding: 1em;
+		border: 2px solid $head-hover;
+		transition: all 1s;
+	}
+}
+
+#head:checked ~ .search input {
+	opacity: 1;
+	display: inline-block;
+    width: 12em;
+}
+
+#head:checked ~ .search {
+	width: auto;
+	overflow: visible;
+}
+
+.navigation:hover .fa-bars {
+	color: $head-hover;
+}
+
+.fa-search,
+.fa-bars {
+	display: inline-block;
+	padding: 1.3em;
+	color: $link-color;
+}

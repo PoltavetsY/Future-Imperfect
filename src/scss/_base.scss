@@ -1,0 +1,38 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: $link-color;
+}
+
+input[name="search"] {
+    font-size: 1em;
+    color: $link-color;
+    box-sizing: border-box;
+    outline: none;
+}
+
+h3, li,
+input[type="submit"] {
+	letter-spacing: .3em;
+	text-transform: uppercase;
+	font-size: .8rem;
+}
+
+h3 {
+	color: $h-color;
+}
+
+input[type="submit"] {
+	border: 1px solid $bord-color;
+	background-color: $no-color;
+}

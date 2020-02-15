@@ -1,0 +1,89 @@
+.nav-menu {
+	opacity: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	overflow-y: auto;
+	background-color: $no-color;
+	border: 1px solid $bord-color;
+	z-index: 30;
+	transition: all 1s;
+}
+
+.menu-search {
+	padding: 2.5em;
+	border-bottom: 1px solid $bord-color;
+	.fa-search {
+		position: absolute;
+		top: 38px;
+    	left: 34px;
+	}
+}
+
+.input-search {
+	padding: 1em 1em 1em 2.5em;
+	width: 100%;
+	border: 1px solid $bord-color;
+	&:focus {
+ 		outline: 2px solid $head-hover;
+ 	}
+}
+
+.menu {
+	border-bottom: 1px solid $bord-color;
+	ul{
+		padding: 0 3em;
+	}
+}
+
+.menu li {
+	padding: 2em;
+	border-bottom: 1px solid $bord-color;
+	&:last-child {
+		border: none;
+	}
+	&:hover h3,
+	&:hover p{
+		color: $head-hover;
+	}
+}
+
+.login {
+	font-family: inherit;
+	padding: 2.5em;
+}
+
+input[type="submit"] {
+	margin: auto;
+	padding: 1.5em;
+	width: 100%;
+	font-weight: bold;
+	&:hover {
+		color: $head-hover;
+		border-color: $head-hover;
+	}
+}
+
+#bars:checked ~ .nav-menu {
+	opacity: 1;
+	width: 25em;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $no-color;
+  opacity: .7;
+  z-index: 1;
+}
+
+#bars:checked ~ .backdrop,
+#head:checked ~ .backdrop {
+  display: block;
+}
